@@ -1,0 +1,43 @@
+.field {
+  position: relative;
+  display: block;
+  width: 100%;
+  transition: color var(--baseAnimationSpeed),
+  background var(--baseAnimationSpeed),
+  box-shadow var(--baseAnimationSpeed);
+
+  margin-block-end: var(--baseSpacing);
+
+  > label {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    font-weight: 600;
+    font-size: var(--smFontSize);
+    letter-spacing: .1px;
+    line-height: 1;
+    padding-block-end: .4rem;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+
+  &.fit-content {
+    width: fit-content;
+  }
+}
+
+.field:has([required]) > label::after,
+.field.required > label::after {
+  content: "*";
+  color: var(--dangerColor);
+  margin-top: -2px;
+  margin-left: -2px;
+}
+form.footer, .footer {
+  display: flex;
+  justify-content: end;
+}

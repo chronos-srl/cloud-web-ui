@@ -1,0 +1,44 @@
+@use "form-field";
+@use "form-input";
+@use "form-filters";
+
+form {
+  width: 100%;
+}
+
+nav.breadcrumb {
+  display: flex;
+  gap: 30px;
+  color: var(--textMuted);
+
+  .active {
+    color: var(--txtPrimaryColor);
+  }
+
+  :where( a, span) {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "/";
+      position: absolute;
+      right: -20px;
+      top: 0;
+      width: 10px;
+      text-align: center;
+      pointer-events: none;
+      opacity: .4;
+    }
+  }
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .5rem;
+  align-items: center;
+  margin-bottom: var(--baseSpacing);
+
+  dt {
+    color: var(--textMuted)
+  }
+}

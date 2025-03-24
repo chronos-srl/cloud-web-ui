@@ -1,0 +1,14 @@
+.badges {
+  gap: .3rem;
+}
+
+.badge {
+  font-size: .75rem;
+  line-height: 1rem;
+  padding-block: .125rem .2rem;
+  padding-inline: .625rem;
+  background-color: var(--primaryColor);
+  color: var(--bodyColor);
+  border-radius: 1rem;
+}
+

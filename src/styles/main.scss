@@ -1,0 +1,16 @@
+@use "reset";
+@use "vars";
+@use "typography";
+@use "layout";
+@use "form";
+@use "buttons";
+@use "table";
+@use "badge";
+
+#app {
+  min-height: 100svh;
+}
+
+#app:has(aside.nav) {
+  margin-inline-start: var(--sidebarWidth);
+}

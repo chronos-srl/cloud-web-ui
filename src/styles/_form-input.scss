@@ -1,0 +1,38 @@
+input:not([type=checkbox],.inline), .input {
+  width: 100%;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--btnRadius);
+  padding: .6rem .8rem;
+  font-size: .9rem;
+  accent-color: var(--accentColor);
+  background: white;
+  transition: color var(--baseAnimationSpeed), background var(--baseAnimationSpeed), box-shadow var(--baseAnimationSpeed);
+  //box-shadow: 0 2px 6px -3px var(--borderColor);
+  //line-height: 2rem;
+  position: relative;
+  outline: none;
+
+&:hover:not(:disabled), &:focus-within {
+    border-color: var(--hoverBackgroundColor);
+    //outline: 1px solid var(--hoverBackgroundColor);
+  }
+
+  &:focus:not(:disabled) {
+    border-color: var(--accentColor);
+  }
+
+  &:disabled {
+    background: var(--borderColor);
+  }
+}
+
+input.inline {
+  border: 1px solid transparent;
+  background: inherit;
+  outline: none;
+  padding: .2rem .4rem;
+
+  &:focus-within, &:focus, &:hover {
+    border-color: var(--hoverBackgroundColor);
+  }
+}

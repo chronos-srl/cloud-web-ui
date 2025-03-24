@@ -1,0 +1,54 @@
+[role=radiogroup] {
+  display: inline-flex;
+  padding: .25rem;
+  background: var(--color1);
+  border-radius: var(--baseRadius);
+  gap: .5rem;
+  font-weight: 500;
+}
+
+[role=radio] {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  min-width: 60px;
+  border-radius: var(--baseRadius);
+  line-height: 1.4em;
+  color: var(--textMuted);
+  padding: .25rem .5rem;
+  font-size: .9rem;
+
+  &[aria-selected=true] {
+    background: var(--bodyColor);
+    font-weight: 500;
+    color: var(--txtPrimaryColor)
+  }
+}
+
+[role=tablist] {
+  border-bottom: 1px solid var(--color1);
+  padding-inline: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  a {
+    padding: .5rem;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    color: var(--textMuted);
+
+    i {
+      padding-inline-end: .3rem;
+    }
+
+    &:hover {
+      color: var(--accentColor);
+    }
+  }
+
+  a.router-link-active {
+    border-bottom-color: var(--accentColor);
+    color: var(--accentColor);
+  }
+}
