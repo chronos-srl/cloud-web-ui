@@ -16,14 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-
-      - name: Authenticate with GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-
       - run: bun install
       - run: bun run build
-
-      - name: Publish to GitHub Packages
-        run: bun publish
+      - run: bun publish
         env:
           NPM_CONFIG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
