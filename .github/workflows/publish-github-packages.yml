@@ -2,7 +2,10 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [ created ]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -22,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+      - run: echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
       - run: bun publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
