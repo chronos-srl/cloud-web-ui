@@ -1,7 +1,6 @@
 {
-  "name": "cloud-web-ui",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@chronos-srl/cloud-web-ui",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
