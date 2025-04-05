@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 defineProps<{
-  value: any
+  value: T
 }>()
 </script>
 

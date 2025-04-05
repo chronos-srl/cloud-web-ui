@@ -6,6 +6,8 @@ const [model, modifiers] = defineModel<string | number>({
   set(value) {
     if (modifiers.number) {
       return parseInt(value as string, 10);
+    } else if (modifiers.boolean) {
+      return value === "true" || value === "yes";
     }
 
     return value

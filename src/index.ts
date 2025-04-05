@@ -15,6 +15,8 @@ import CardItem from "@/components/ui/CardItem.vue";
 import SettingsCheckboxField from "@/components/pages/settings/SettingsCheckboxField.vue";
 import RowStats from "@/components/ui/RowStats.vue";
 import NumberStat from "@/components/ui/NumberStat.vue";
+import SettingsField from "@/components/pages/settings/SettingsField.vue";
+
 
 export {
   AsideMainNavigation,
@@ -24,6 +26,7 @@ export {
   Cips,
   Select,
   SelectOption,
+  SettingsField,
   SettingsFieldButton,
   SettingsCheckboxField,
   SettingsGroup,
