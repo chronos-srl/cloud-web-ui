@@ -12,13 +12,13 @@
   margin: 0;
   flex-shrink: 0;
   cursor: pointer;
-  padding-block: 5px;
-  padding-inline: var(--btnInline, 20px);
+  padding-block: 10px;
+  padding-inline: var(--btnInline, 10px);
   column-gap: 7px;
   -webkit-user-select: none;
   user-select: none;
   min-width: var(--btnHeight);
-  min-height: var(--btnHeight);
+  //min-height: var(--btnHeight);
   text-align: center;
   text-decoration: none;
   line-height: 1em;
@@ -62,4 +62,29 @@ table .btn {
   padding: .3rem .6rem;
   min-height: auto;
   font-weight: normal;
+}
+
+
+.btn-delete {
+  background: var(--dangerColor);
+
+  &:hover:not([disabled], [aria-disabled="true"]) {
+    background: color-mix(in srgb, var(--dangerColor), white 14%);
+  }
+}
+
+
+.btn-close {
+  font-size: 12px;
+  min-height: 30px;
+  min-width: 30px;
+  --btnInline: 10px;
+  background-color: transparent;
+  color: var(--txtPrimaryColor);
+  border-radius: 50%;
+  padding: 0;
+
+  &:hover:not([disabled]) {
+    background: var(--color3);
+  }
 }

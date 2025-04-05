@@ -10,5 +10,10 @@
   background-color: var(--primaryColor);
   color: var(--bodyColor);
   border-radius: 1rem;
+
+  &.is-light {
+    background: var(--color1);
+    color: var(--primaryColor)
+  }
 }
 

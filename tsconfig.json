@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
   "include": [
     "env.d.ts",
     "src/**/*",
@@ -8,7 +7,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
-    "declarationDir": "dist/types",
+    "declarationDir": "dist",
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "Node",
@@ -16,11 +15,18 @@
     "skipLibCheck": true,
     "strict": true,
     "sourceMap": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ]
   },
   "exclude": [
     "node_modules",

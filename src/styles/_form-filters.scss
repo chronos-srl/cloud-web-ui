@@ -23,6 +23,10 @@
     font-weight: 500;
     color: var(--txtPrimaryColor)
   }
+
+  &:hover {
+    color: var(--accentColor);
+  }
 }
 
 [role=tablist] {

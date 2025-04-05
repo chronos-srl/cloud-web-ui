@@ -7,6 +7,14 @@
   }
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: var(--wrapperWidth);
+  margin-inline: auto;
+  margin-block-end: var(--baseSpacing);
+}
+
 
 .flex-actions {
   display: flex;
@@ -38,7 +46,7 @@
   background: var(--baseColor);
   width: 100%;
   padding: 2rem;
-  border-radius: var(--lgRadius);
+  border-radius: var(--btnRadius);
   border: 1px solid var(--borderColor);
   box-shadow: 0 2px 6px -3px var(--borderColor);
 
@@ -52,8 +60,63 @@
     }
   }
 
-  .card-content {
-    display: flex;
-    gap: 1.6em;
+  &.card-details {
+    padding: 1rem;
+
+    .card-item {
+      min-width: 5rem;
+    }
+
+    &:has(.group) {
+      .group {
+        padding: 1rem;
+        display: flex;
+        gap: 3rem;
+        flex-flow: wrap;
+      }
+    }
+
+    &:not(:has(.group)) {
+      display: flex;
+      flex-flow: wrap;
+      gap: 3rem;
+    }
   }
+}
+
+@for $i from 4 through 0 {
+  .mt-#{$i} {
+    margin-block-start: #{$i}rem;
+  }
+
+  .mb-#{$i} {
+    margin-block-end: #{$i}rem;
+  }
+
+  .mb-#{$i} {
+    margin-block: #{$i}rem;
+  }
+
+  .ml-#{$i} {
+    margin-inline-start: #{$i}rem;
+  }
+
+  .gap-#{$i} {
+    gap: #{$i}rem;
+  }
+}
+
+.pt-0 {
+  padding-block-start: 0;
+}
+.ml-03 {
+  margin-inline-start: 0.3rem;
+}
+
+.mt-04 {
+  margin-block-start: .4rem;
+}
+
+.flex-start {
+  align-items: flex-start;
 }

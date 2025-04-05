@@ -1,0 +1,49 @@
+dialog {
+  margin: auto;
+  border: none;
+  outline: none;
+  min-width: var(--dialogMinWidth, 400px);
+  border-radius: var(--baseRadius);
+
+  ::backdrop {
+    background: var(--overlayColor);
+    display: flex;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    //border-top: 3px solid var(--primaryColor);
+  }
+
+  .content, footer {
+    padding: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  section, .dialog-content {
+    flex: 1;
+  }
+
+  footer {
+    background: var(--bodyColor);
+    column-gap: var(--smSpacing);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--borderColor);
+
+    > div {
+      column-gap: var(--smSpacing);
+      display: flex;
+      align-items: center;
+    }
+  }
+}

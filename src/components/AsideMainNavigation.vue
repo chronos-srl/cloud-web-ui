@@ -1,4 +1,8 @@
 <script setup lang="ts">
+
+import {UserImageData} from "@/models/userImageData.ts";
+import UserImage from "@/components/ui/UserImage.vue";
+
 export interface MenuItem {
   title: string
   link: string | object
@@ -12,6 +16,7 @@ export interface MenuGroup {
 
 defineProps<{
   groups: MenuGroup[]
+  user: UserImageData
 }>()
 </script>
 
@@ -33,11 +38,10 @@ defineProps<{
 
     <div class="nav-footer">
       <div class="user">
-        <button ref="userAvatar" class="btn user-avatar" popovertarget="userMenuPopover">
-          <!--          <UserAvatar :user="userStore.currentUser"/>-->
-          aaa
+        <button ref="userAvatar" id="userAvatar" class="btn user-avatar" popovertarget="userMenuPopover">
+          <UserImage :user="user" :small="true"/>
         </button>
-        <div ref="userMenuPopover" id="userMenuPopover" popover>
+        <div ref="userMenuPopover" id="userMenuPopover" popover class="dropdown">
           <router-link :to="{name: 'profile'}" class="dropdown-item">
             <i class="ri-tools-line"/> Profile
           </router-link>
@@ -132,5 +136,18 @@ defineProps<{
     height: 32px;
     overflow: hidden;
   }
+}
+
+#userAvatar {
+  anchor-name: --myAnchor;
+}
+
+#userMenuPopover {
+  position-anchor: --myAnchor;
+  position: fixed;
+  inset: unset;
+  bottom: anchor(top);
+  left: anchor(start);
+  margin: 5px 0;
 }
 </style>

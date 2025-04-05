@@ -1,4 +1,4 @@
-input:not([type=checkbox],.inline), .input {
+input:not([type=checkbox],.inline), .input, select, .select {
   width: 100%;
   border: 1px solid var(--borderColor);
   border-radius: var(--btnRadius);
@@ -28,11 +28,99 @@ input:not([type=checkbox],.inline), .input {
 
 input.inline {
   border: 1px solid transparent;
+  border-radius: var(--btnRadius);
   background: inherit;
   outline: none;
-  padding: .2rem .4rem;
+  padding: .1rem .4rem .1rem .2rem;
 
   &:focus-within, &:focus, &:hover {
     border-color: var(--hoverBackgroundColor);
+  }
+}
+
+.editable-title {
+  margin-block-end: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=checkbox] {
+  width: auto;
+  display: inline-block;
+}
+
+select {
+  position: relative;
+  min-height: 42px;
+}
+
+details.select {
+  min-width: 110px;
+  padding: 0;
+
+  &.fit {
+    width: fit-content;
+  }
+
+  &.has-placeholder summary {
+    color: var(--textMuted);
+  }
+
+  summary {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    padding: .6rem 2rem .6em .8rem;
+    border-radius: var(--btnRadius);
+
+    &::after {
+      position: absolute;
+      right: .8em;
+      top: 0.7rem;
+      content: "\EA4E";
+      font-family: "remixicon";
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus {
+      outline: var(--accentColor) 1px solid;
+    }
+
+  }
+
+  &[aria-disabled="true"]{
+    background: var(--baseAlt1Color);
+    color:  #6e6e6e;
+    pointer-events: none;
+  }
+
+  .details-menu {
+    position: absolute;
+    min-width: 110px;
+    width: 100%;
+    left: 0;
+    margin-block-start: .3rem;
+    z-index: 99;
+  }
+
+  .selected {
+    background: var(--accentColor);
+    color: #fff;
+  }
+
+  input[type=text] {
+    border: none;
+    padding: 0;
+    box-shadow: none;
   }
 }

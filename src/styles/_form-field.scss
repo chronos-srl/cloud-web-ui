@@ -28,6 +28,12 @@
   &.fit-content {
     width: fit-content;
   }
+
+  small.is-error {
+    display: block;
+    color: var(--dangerColor);
+    margin-block-start: .3rem;
+  }
 }
 
 .field:has([required]) > label::after,

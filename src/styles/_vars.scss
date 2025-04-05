@@ -8,6 +8,8 @@
 
   --borderColor: #e4e9ec;
   --hoverBackgroundColor: #d7dde4;
+  --overlayColor: rgba(53, 71, 104, .28);
+
   --color1: #e4e9ec;
   --color2: #d7dde4;
   --color3: #c6cdd7;
@@ -15,8 +17,10 @@
   --disabledColor: #a0a6ac;
 
   --sidebarWidth: 75px;
+  --wrapperWidth: 850px;
+
   --btnHeight: 40px;
-  --btnInline: 20px;
+  --btnInline: 14px;
   --btnRadius: 4px;
 
   // Fonts
@@ -34,4 +38,6 @@
 
   // Colors
   --dangerColor: #e34562;
+  --successColor: #32ad84;
+  --warningColor: #ff944d;
 }
