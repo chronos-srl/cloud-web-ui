@@ -132,8 +132,7 @@ defineProps<{
     font-size: 1.2em;
     font-weight: 400;
     padding: 0;
-    width: 32px;
-    height: 32px;
+    width: 40px;
     overflow: hidden;
   }
 }
