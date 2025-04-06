@@ -93,7 +93,7 @@
     margin-block-end: #{$i}rem;
   }
 
-  .mb-#{$i} {
+  .my-#{$i} {
     margin-block: #{$i}rem;
   }
 
@@ -112,9 +112,14 @@
 .ml-03 {
   margin-inline-start: 0.3rem;
 }
-
 .mt-04 {
   margin-block-start: .4rem;
+}
+.mb-04 {
+  margin-block-end: .4rem;
+}
+.my-04 {
+  margin-block: .4rem;
 }
 
 .flex-start {

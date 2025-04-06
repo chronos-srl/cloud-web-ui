@@ -47,3 +47,12 @@ form.footer, .footer {
   display: flex;
   justify-content: end;
 }
+
+form .flex .field:last-child {
+  margin-block-end: var(--baseSpacing);
+}
+
+.help-block {
+  margin-block-start: .2rem;
+  color: var(--textMuted);
+}

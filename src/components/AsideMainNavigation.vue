@@ -25,15 +25,17 @@ defineProps<{
     <header>Cloud</header>
 
     <div class="nav-menu">
-      <div class="nav-group" v-for="(group, index) of groups" :key="index">
-        <p class="nav-title" v-if="group.title">{{ group.title }}</p>
-        <router-link class="nav-item"
-                     v-for="item of group.children" :key="item.title"
-                     :to="item.link"
-                     :title="item.title">
-          <i :class="item.icon"/>
-        </router-link>
-      </div>
+      <slot>
+        <div class="nav-group" v-for="(group, index) of groups" :key="index">
+          <p class="nav-title" v-if="group.title">{{ group.title }}</p>
+          <router-link class="nav-item"
+                       v-for="item of group.children" :key="item.title"
+                       :to="item.link"
+                       :title="item.title">
+            <i :class="item.icon"/>
+          </router-link>
+        </div>
+      </slot>
     </div>
 
     <div class="nav-footer">

@@ -1,0 +1,16 @@
+.notification {
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+:where(.notification, .label){
+  &.is-danger {
+    background-color: #f14668;
+    color: #fff;
+  }
+
+  &.is-warning {
+    background-color: var(--warningColor);
+  }
+}
