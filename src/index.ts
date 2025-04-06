@@ -19,7 +19,8 @@ import SettingsField from "@/components/pages/settings/SettingsField.vue";
 import CreateLinkButton from "@/components/ui/CreateLinkButton.vue";
 import Searchbar from "@/components/ui/Searchbar.vue";
 import Breadcrumb from "@/components/ui/Breadcrumb.vue";
-
+import PaginationFooter from "@/components/pagination/PaginationFooter.vue";
+import {useDetailsSelect} from "@/components/select/select.ts";
 
 export {
   AsideMainNavigation,
@@ -44,8 +45,11 @@ export {
   RowStats,
   NumberStat,
   Searchbar,
-  Breadcrumb
+  Breadcrumb,
+  PaginationFooter,
+  useDetailsSelect
 }
+
 
 
 
