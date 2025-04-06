@@ -23,6 +23,12 @@
   flex-shrink: 0;
 }
 
+#page-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .flex {
   display: flex;
   align-items: center;

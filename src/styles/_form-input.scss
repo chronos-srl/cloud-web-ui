@@ -62,7 +62,7 @@ select {
 }
 
 details.select {
-  min-width: 110px;
+  min-width: var(--minWidth, 110px);
   padding: 0;
 
   &.fit {
