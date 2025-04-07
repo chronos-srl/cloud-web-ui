@@ -1,5 +1,4 @@
 import {type Ref, ref} from "vue";
-import {EmitFn} from "@vue/runtime-core";
 
 export function extraLiValue(li: HTMLElement): string {
   const value = li.dataset.value

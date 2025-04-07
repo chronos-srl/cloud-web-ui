@@ -20,7 +20,7 @@ function disableImage() {
 
 <template>
   <div class="user-avatar" :class="{'user-avatar-sm': small}">
-    <img v-if="user.imageUrl"
+    <img v-if="user.imageUrl && enableImage"
          loading="lazy"
          :src="user.imageUrl"
          :alt="'Profile image of ' + user.firstName"
