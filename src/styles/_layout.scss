@@ -26,7 +26,7 @@
 #page-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .flex {
@@ -130,4 +130,8 @@
 
 .flex-start {
   align-items: flex-start;
+}
+
+.is-error {
+  color: var(--dangerColor);
 }
